@@ -1,7 +1,7 @@
-<p class="lead">Welcome to the Most Revolutionized Email Service</p>
+<p class="lead">Welcome to the Most Revolutionary Email Service</p>
 
 <div>
-    <table class="table table-striped">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Subject</th>
@@ -11,12 +11,19 @@
         </thead>
         <tbody>
             {{#each}}
-            <tr>
+            <tr {{action 'showHide'}} class="active">
                 <td>{{subject}}</td>
                 <td>{{sender}}</td>
                 <td>{{date}}</td>
             </tr>
+            {{#if isShowing}}
+            <tr>
+                <td colspan="3">{{body}}</td>
+            </tr>
+            {{/if}}
             {{/each}}
         </tbody>
     </table>
 </div>
+
+<hr/>
