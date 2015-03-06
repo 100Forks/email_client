@@ -27,4 +27,4 @@ var inbox = [
     date: 'Feb 28, 2010',
     body: 'Can anyone recommend a good site about dog parks?'
   }
-]
+];

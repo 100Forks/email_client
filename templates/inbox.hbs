@@ -1,0 +1,22 @@
+<p class="lead">Welcome to the Most Revolutionized Email Service</p>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>From</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each}}
+            <tr>
+                <td>{{subject}}</td>
+                <td>{{sender}}</td>
+                <td>{{date}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
