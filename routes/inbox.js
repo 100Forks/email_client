@@ -1,5 +1,5 @@
 Email.InboxRoute = Ember.Route.extend({
     model:function() {
-        return inbox;
+        return this.store.find('inbox');
     }
 });

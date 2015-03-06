@@ -3,19 +3,21 @@ Email.NewEmailController = Ember.ArrayController.extend({
     actions: {
         sendEmail: function() {
             var date = new Date().toLocaleDateString();
-            inbox.addObject({
-                sender: this.sender,
-                receiver: this.receiver,
-                subject: this.subject,
+            var newEmail = this.store.createRecord('inbox', {
+                sender: this.get('sender'),
+                receiver: this.get('receiver'),
+                subject: this.get('subject'),
                 date: date,
-                body: this.body
+                body: this.get('body')
             });
+            this.set('showSuccess', true);
+            newEmail.save();
             this.set('sender', null);
             this.set('receiver', null);
             this.set('subject', null);
             this.set('date', null);
             this.set('body', null);
-            this.set('showSuccess', true);
+            this.transitionToRoute('inbox');
         }
     }
 });
