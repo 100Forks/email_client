@@ -17,6 +17,8 @@ Email.NewEmailController = Ember.ArrayController.extend({
             this.set('subject', null);
             this.set('date', null);
             this.set('body', null);
+            alert('Email Sent Successfully!');
+            this.set('showSuccess', false);
             this.transitionToRoute('inbox');
         }
     }
