@@ -4,16 +4,16 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Subject</th>
                 <th>From</th>
+                <th>Subject</th>
                 <th>Date</th>
             </tr>
         </thead>
         <tbody>
             {{#each}}
             <tr {{action 'showHide'}} class="active">
-                <td>{{subject}}</td>
                 <td>{{sender}}</td>
+                <td>{{subject}}</td>
                 <td>{{date}}</td>
             </tr>
             {{#if isShowing}}
