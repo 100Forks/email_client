@@ -1,4 +1,6 @@
 Email.InboxController = Ember.ArrayController.extend({
+    sortProperties: ['date'],
+    sortAscending: false,
     itemController: 'inboxs'
 });
 
